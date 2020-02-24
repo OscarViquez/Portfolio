@@ -1,0 +1,57 @@
+/* /////////////////// All Jumbotrons ////////////////////// */
+.jumbotron {
+    height: 900px;
+    padding: 5em inherit;
+    text-align: center;
+}
+.name {
+    /*  Provides 140 px from the top side of the Jumbotron */
+    margin-top: 140px;
+    
+    text-align: center;
+}
+/* //////////////////// About Me ////////////////////////// */
+
+/* The whole about me section */
+#About-me {
+    height: 900px;
+}
+
+#about-p {
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+/* list section */
+.div-lists{ 
+    text-align: left;
+    list-style: inside;
+    list-style-type: unset;
+    }
+
+/* //////////////////// Projects ////////////////////////// */
+
+#projets{
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.projects-cards{
+    padding-left: 50px;
+    padding-right:50px; 
+}
+
+/* //////////////////// Miscs ////////////////////////// */
+
+.display-4 {
+    text-align: center;
+}
+
+.lead{
+    text-align: center;
+}
+
+
+/*  */
+
+/*  */
