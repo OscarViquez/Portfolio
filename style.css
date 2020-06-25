@@ -1,57 +1,146 @@
-/* /////////////////// All Jumbotrons ////////////////////// */
-.jumbotron {
-    height: 900px;
-    padding: 5em inherit;
-    text-align: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-.name {
-    /*  Provides 140 px from the top side of the Jumbotron */
-    margin-top: 140px;
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
     
-    text-align: center;
-}
-/* //////////////////// About Me ////////////////////////// */
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
 
-/* The whole about me section */
-#About-me {
-    height: 900px;
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
 }
 
-#about-p {
-    margin-left: 50px;
-    margin-right: 50px; 
-}
-
-/* list section */
-.div-lists{ 
-    text-align: left;
-    list-style: inside;
-    list-style-type: unset;
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
     }
-
-/* //////////////////// Projects ////////////////////////// */
-
-#projets{
-    margin-left: 50px;
-    margin-right: 50px; 
 }
 
-.projects-cards{
-    padding-left: 50px;
-    padding-right:50px; 
+/* General styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
-/* //////////////////// Miscs ////////////////////////// */
-
-.display-4 {
-    text-align: center;
+section {
+    padding: 5em 2em;
 }
 
-.lead{
-    text-align: center;
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
 }
 
 
-/*  */
+/* header */
 
-/*  */
+nav { display: none; }
+
+/*  Intro section  */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2
+    }    
+    
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        /* to get that lack of overlapping issue we do this */
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+
+    }
+}
+
+/* Services */
