@@ -56,6 +56,28 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 4px;
+}
+
+/*  Buttons */
+.btn {
+    display: inline-block;
+    padding: .5em 3.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    box-shadow: var(--bs);
+
+}
+
 /* Typography */
 
 h1,
@@ -104,6 +126,7 @@ nav { display: none; }
 
 .intro {
     position: relative;
+    padding-bottom: 200px;
 }
 
 .intro__img {
@@ -144,3 +167,56 @@ nav { display: none; }
 }
 
 /* Services */
+
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../Portfolio2.github.io/img/services-bg.jpg);
+    background-size: cover;
+    background-blend-mode: normal;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    /* stops from getting to big and expand when the screen expands */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.section__title--services:after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .services+ .services {
+        margin-left: 2em;
+    }
+}
+
+/*  */
+
+.my-service {
+    background-color: var(--clr-dark);
+    background-image
+}
