@@ -20,3 +20,8 @@ https://oscarviquez.github.io/Portfolio2.github.io/
         width: calc(100% + 1.5em);
 
     }
+
+    /* sudo elemets wont work unless you add a content prop */
+
+    /* we are using relative since we will use other things that will have absolute positiion */
+    position: relative;
