@@ -1,6 +1,7 @@
 # Portfolio Test
 revamped version of the original
-https://oscarviquez.github.io/Portfolio2.github.io/
+https://oscarviquez.github.io/Portfolio/
+
 
 .service {
     /* stops from getting to big and expand when the screen expands */
